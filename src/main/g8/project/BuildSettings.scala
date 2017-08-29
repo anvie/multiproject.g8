@@ -10,7 +10,7 @@ object BuildSettings {
     homepage              := Some(new URL("http://ansvia.com")),
     organization          := "$organization$",
     organizationHomepage  := Some(new URL("http://ansvia.com")),
-    description           := "$description$",
+    description           := "$desc$",
     startYear             := Some(2012),
     licenses              := Seq("Apache 2" -> new URL("http://www.apache.org/licenses/LICENSE-2.0.txt")),
     scalaVersion          := "$scalaVersion$",
@@ -37,7 +37,7 @@ object BuildSettings {
     publish := (),
     publishLocal := ()
   )
-  
+
   lazy val withPublishing = seq(
       publishTo <<= version { (v:String) =>
             val ansviaRepo = "http://scala.repo.ansvia.com/nexus"
@@ -67,4 +67,3 @@ object BuildSettings {
   )
 
 }
-
